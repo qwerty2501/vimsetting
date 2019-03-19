@@ -2,16 +2,6 @@ let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let $CONFIG = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME 
 let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOME 
 
-set number
-set title
-set showmatch
-syntax on
-set tabstop=2
-set smartindent
-set clipboard=unnamedplus
-set directory=~/.vim/tmp
-let g:netrw_liststyle= 3
-set mouse=a
 
 
 if &compatible
@@ -45,7 +35,34 @@ if dein#load_state(s:dein_dir)
  endif
 endif
 
+
+set number
+set title
+set showmatch
+syntax on
+set tabstop=2
+set smartindent
+set clipboard=unnamedplus
+set noswapfile
+let g:netrw_liststyle= 3
+set mouse=a
+set shiftwidth=2
+set noexpandtab
+set hidden
+set completeopt=menuone
 filetype plugin indent on
 syntax enable
 
+let g:LanguageClient_serverCommands ={
+	\'go':['bingo','-mode','stdio'],
+\}
+
+
+let g:deoplete#enable_at_startup = 1
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
