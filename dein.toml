@@ -25,3 +25,12 @@ repo = 'junegunn/fzf'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 
+
+[[plugins]]
+repo = 'luochen1990/rainbow'
+
+[[plugins]]
+repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'

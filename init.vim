@@ -57,17 +57,23 @@ set hidden
 set completeopt=menuone
 filetype plugin indent on
 syntax enable
+set signcolumn=yes
 
 let g:LanguageClient_serverCommands ={
-	\'go':['bingo','-mode','stdio'],
+	\'go':['gopls','-mode','stdio'],
 \}
 
 
 let g:deoplete#enable_at_startup = 1
+let g:rainbow_active = 1
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
+
+
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
+noremap <silent> <Space>n :NERDTreeToggle<CR>
