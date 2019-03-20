@@ -60,15 +60,18 @@ syntax enable
 set signcolumn=yes
 
 let g:LanguageClient_serverCommands ={
-	\'go':['gopls','-mode','stdio'],
+	\'go':['bingo'],
 \}
-
+autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
 
 let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 
+let g:LanguageClient_loggingLevel = 'INFO'
+let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
+let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
 
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
