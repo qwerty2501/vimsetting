@@ -44,3 +44,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'kassio/neoterm'
+
+
+[[plugins]]
+repo = 'elmcast/elm-vim'
+
+
+[[plugins]]
+repo = 'w0rp/ale'

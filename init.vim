@@ -64,7 +64,16 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 let g:LanguageClient_serverCommands ={
 	\'go':['bingo'],
 \}
-autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+
+function LC_maps()
+	if has_key(g:LanguageClient_serverCommands,&filetype)
+		nnoremap <silent>K :call LanguageClient#textDocument_hover()<CR>
+		nnoremap <silent>gd :call LanguageClient#textDocument_definition()<CR>
+		nnoremap <silent><F2> :call LanguageClient#textDocument_rename()<CR>
+		exec 'autocmd BufWritePre *.' . &filetype .' :call LanguageClient#textDocument_formatting_sync()'
+	endif
+endfunction
+autocmd FileType * call LC_maps()
 
 let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
@@ -75,10 +84,8 @@ let g:neoterm_autoinsert= 1
 let mapleader="\<Space>"
 
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent>K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent>gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent><F2> :call LanguageClient#textDocument_rename()<CR>
+
+
 noremap <silent><Leader>n :NERDTreeToggle<CR>
 noremap <silent><Leader>u :NERDTree<CR>
 nnoremap <silent><Leader>@ :Ttoggle<CR>
