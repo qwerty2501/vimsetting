@@ -2,8 +2,6 @@ let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let $CONFIG = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME 
 let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOME 
 
-
-
 if &compatible
  set nocompatible
 endif
@@ -59,7 +57,7 @@ filetype plugin indent on
 syntax enable
 set signcolumn=yes
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:> ,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 let g:LanguageClient_serverCommands ={
