@@ -53,6 +53,7 @@ set shiftwidth=2
 set noexpandtab
 set hidden
 set completeopt=menuone
+set nowrap
 filetype plugin indent on
 syntax enable
 set signcolumn=yes
@@ -79,5 +80,5 @@ nnoremap <silent>gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent><F2> :call LanguageClient#textDocument_rename()<CR>
 noremap <silent><Space>n :NERDTreeToggle<CR>
 noremap <silent><Space>u :NERDTree<CR>
-nnoremap <silent><Space>@ :Ttoggle<CR>
+nnoremap <silent><Space>t :Ttoggle<CR>
 tnoremap <C-[>  <C-\><C-n>:Ttoggle<CR>
