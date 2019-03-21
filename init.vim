@@ -71,15 +71,15 @@ let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
-
-let g:LanguageClient_loggingLevel = 'INFO'
-let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
-let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
+let g:neoterm_default_mod = 'botright'
+let g:neoterm_autoinsert= 1
 
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-" Or map each action separately
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-noremap <silent> <Space>n :NERDTreeToggle<CR>
+nnoremap <silent>K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent>gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent><F2> :call LanguageClient#textDocument_rename()<CR>
+noremap <silent><Space>n :NERDTreeToggle<CR>
+noremap <silent><Space>u :NERDTree<CR>
+nnoremap <silent><Space>@ :Ttoggle<CR>
+tnoremap <C-[>  <C-\><C-n>:Ttoggle<CR>
