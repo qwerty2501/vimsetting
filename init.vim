@@ -60,6 +60,8 @@ set signcolumn=yes
 set list
 set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set foldmethod=syntax
+set foldlevel=100
 
 let g:LanguageClient_serverCommands ={
 	\'go':['bingo'],
