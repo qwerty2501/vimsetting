@@ -72,13 +72,14 @@ let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 let g:neoterm_default_mod = 'botright'
 let g:neoterm_autoinsert= 1
+let mapleader="\<Space>"
 
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent>K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent>gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent><F2> :call LanguageClient#textDocument_rename()<CR>
-noremap <silent><Space>n :NERDTreeToggle<CR>
-noremap <silent><Space>u :NERDTree<CR>
-nnoremap <silent><Space>t :Ttoggle<CR>
+noremap <silent><Leader>n :NERDTreeToggle<CR>
+noremap <silent><Leader>u :NERDTree<CR>
+nnoremap <silent><Leader>@ :Ttoggle<CR>
 tnoremap <C-[>  <C-\><C-n>:Ttoggle<CR>
