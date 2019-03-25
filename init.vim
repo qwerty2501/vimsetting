@@ -88,7 +88,8 @@ let mapleader="\<Space>"
 
 
 
-noremap <silent><Leader>n :NERDTreeToggle<CR>
-noremap <silent><Leader>u :NERDTree<CR>
+noremap <silent><Leader>N :NERDTreeToggle<CR>
+noremap <silent><Leader>n :NERDTree<CR>
 nnoremap <silent><Leader>@ :Ttoggle<CR>
-tnoremap <C-[>  <C-\><C-n>:Ttoggle<CR>
+tnoremap <silent><C-[>  <C-\><C-n>
+nnoremap <silent><Leader>l "lyiW:e <C-R>l<CR>
