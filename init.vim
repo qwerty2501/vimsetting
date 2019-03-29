@@ -94,4 +94,5 @@ noremap <silent><Leader>n :NERDTree<CR>
 nnoremap <silent><Leader>@ :Ttoggle<CR>
 tnoremap <silent><C-w> <C-\><C-n><C-w>
 tnoremap <silent><C-q> <C-\><C-n>
+tmap <silent><C-d> <C-d><C-\><C-n><CR>:q<CR>
 nnoremap <silent><Leader>l "lyiW:e <C-R>l<CR>
