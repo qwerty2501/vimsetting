@@ -59,3 +59,7 @@ repo = 'w0rp/ale'
 repo = 'prettier/vim-prettier'
 build = 'npm install'
 on_ft = ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+

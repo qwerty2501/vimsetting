@@ -85,6 +85,8 @@ let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 let g:neoterm_default_mod = 'botright'
 let g:neoterm_autoinsert= 1
+let g:python3_host_prog= "/usr/bin/python3"
+let g:python_host_prog=""
 let mapleader="\<Space>"
 
 
@@ -93,6 +95,7 @@ let mapleader="\<Space>"
 noremap <silent><Leader>N :NERDTreeToggle<CR>
 noremap <silent><Leader>n :NERDTree<CR>
 nnoremap <silent><Leader>@ :Ttoggle<CR>
+nnoremap <silent><Leader><Leader> :Denite file_rec<CR>
 tnoremap <silent><C-w> <C-\><C-n><C-w>
 tnoremap <silent><C-q> <C-\><C-n>
 tmap <silent><C-d> <C-d><C-\><C-n><CR>:q<CR>
