@@ -66,3 +66,7 @@ repo = 'Shougo/denite.nvim'
 repo ='tarekbecker/vim-yaml-formatter'
 on_ft = ['yaml','yml']
 build = 'pip install pyyaml'
+
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
