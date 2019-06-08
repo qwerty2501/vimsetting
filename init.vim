@@ -66,6 +66,7 @@ set foldmethod=syntax
 set foldlevel=100
 let g:LanguageClient_serverCommands ={
 	\'go':['gopls'],
+	\'typescript': ['typescript-language-server', '--stdio'],
 \}
 
 function LC_maps()
@@ -78,7 +79,7 @@ function LC_maps()
 endfunction
 autocmd FileType * call LC_maps()
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.{yaml,yml},*.html :Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.{yaml,yml},*.html :prettier
 let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
 let g:loaded_netrw       = 1
