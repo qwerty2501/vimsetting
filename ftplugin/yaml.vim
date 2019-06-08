@@ -1,0 +1,2 @@
+autocmd BufWritePre yaml :YAMLFormat
+
