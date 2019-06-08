@@ -63,10 +63,4 @@ on_ft = ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', '
 repo = 'Shougo/denite.nvim'
 
 [[plugins]]
-repo ='tarekbecker/vim-yaml-formatter'
-on_ft = ['yaml','yml']
-build = 'pip install pyyaml'
-
-
-[[plugins]]
 repo = 'leafgarland/typescript-vim'
