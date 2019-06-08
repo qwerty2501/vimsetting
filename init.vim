@@ -77,7 +77,6 @@ function LC_maps()
 	endif
 endfunction
 autocmd FileType * call LC_maps()
-autocmd BufWritePre * :YAMLFormat
 let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
 let g:loaded_netrw       = 1
