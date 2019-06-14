@@ -64,3 +64,9 @@ repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
