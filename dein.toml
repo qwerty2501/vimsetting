@@ -70,3 +70,7 @@ repo = 'godlygeek/tabular'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+
