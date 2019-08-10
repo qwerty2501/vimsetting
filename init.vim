@@ -86,8 +86,6 @@ function LC_format()
 endfunction
 autocmd FileType * call LC_maps()
 autocmd BufWritePre * call LC_format()
-autocmd BufNewFile * nested
-			\ call localrc#load(['.local.newfile.vim',printf('.local.newfile.%s.vim',&ft)])
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.md,*.json,*.graphql,*.vue,*.{yaml,yml},*.html :Prettier
 let g:deoplete#enable_at_startup = 1
