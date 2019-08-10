@@ -67,6 +67,8 @@ set foldlevel=100
 let g:LanguageClient_serverCommands ={
 	\'go':['gopls'],
 	\'typescript': ['typescript-language-server', '--stdio'],
+	\'c':['clangd','-compile-commands-dir=' . getcwd()],
+	\'cpp':['clangd','-compile-commands-dir=' . getcwd()],
 \}
 
 function LC_maps()
