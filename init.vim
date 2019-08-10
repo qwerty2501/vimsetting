@@ -79,7 +79,15 @@ function LC_maps()
 		nnoremap <silent><F2> :call LanguageClient#textDocument_rename()<CR>
 	endif
 endfunction
+
+let g:lc_format = 0
+function LC_format()
+	if g:lc_format
+		:call LanguageClient#textDocument_formatting_sync()
+	endif
+endfunction
 autocmd FileType * call LC_maps()
+autocmd BufWritePre * call LC_format()
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.md,*.json,*.graphql,*.vue,*.{yaml,yml},*.html :Prettier
 let g:deoplete#enable_at_startup = 1

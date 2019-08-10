@@ -74,3 +74,6 @@ repo = 'plasticboy/vim-markdown'
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
 
+
+[[plugins]]
+repo = 'octol/vim-cpp-enhanced-highlight'
