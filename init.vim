@@ -56,8 +56,6 @@ set noexpandtab
 set hidden
 set completeopt=menuone
 set nowrap
-filetype plugin indent on
-syntax enable
 set signcolumn=yes
 set list
 set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
@@ -83,7 +81,7 @@ endfunction
 let g:lc_format = 0
 function LC_format()
 	if g:lc_format
-		:call LanguageClient#textDocument_formatting_sync()
+		call LanguageClient#textDocument_formatting_sync()
 	endif
 endfunction
 autocmd FileType * call LC_maps()
@@ -113,3 +111,6 @@ tnoremap <silent><C-q> <C-\><C-n>
 tmap <silent><C-d> <C-d><C-\><C-n><CR>:q<CR>
 nnoremap <silent><Leader>l "lyiW:e <C-R>l<CR>
 nmap <S-O> o<ESC>
+
+filetype plugin indent on
+syntax enable
