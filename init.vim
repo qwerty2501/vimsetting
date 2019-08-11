@@ -78,9 +78,8 @@ function LC_maps()
 	endif
 endfunction
 
-let g:lc_format = 0
 function LC_format()
-	if g:lc_format
+	if get(g:,'lc_format',0)
 		call LanguageClient#textDocument_formatting_sync()
 	endif
 endfunction
@@ -92,15 +91,14 @@ let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
-let g:neoterm_default_mod = 'botright'
+"let g:neoterm_default_mod = 'botright'
 let g:neoterm_autoinsert= 1
 let g:python3_host_prog= "/usr/bin/python3"
 let g:python_host_prog=""
+filetype plugin indent on
+syntax enable
+
 let mapleader="\<Space>"
-
-
-
-
 noremap <silent><Leader>N :NERDTreeToggle<CR>
 noremap <silent><Leader>n :NERDTree<CR>
 nnoremap <silent><Leader>@ :Ttoggle<CR>
@@ -112,5 +110,19 @@ tmap <silent><C-d> <C-d><C-\><C-n><CR>:q<CR>
 nnoremap <silent><Leader>l "lyiW:e <C-R>l<CR>
 nmap <S-O> o<ESC>
 
-filetype plugin indent on
-syntax enable
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr><TAB>
+ \ pumvisible() ? "\<C-n>" :
+ \ neosnippet#expandable_or_jumpable() ?
+ \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif

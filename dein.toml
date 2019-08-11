@@ -80,3 +80,9 @@ repo = 'octol/vim-cpp-enhanced-highlight'
 
 [[plugins]]
 repo = 'thinca/vim-localrc'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
