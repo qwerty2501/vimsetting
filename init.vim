@@ -44,6 +44,7 @@ set title
 set showmatch
 set hlsearch
 set incsearch
+set belloff
 syntax on
 set tabstop=2
 set smartindent
