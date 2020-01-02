@@ -89,3 +89,6 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'vim-scripts/grep.vim'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
