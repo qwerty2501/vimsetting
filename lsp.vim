@@ -6,6 +6,7 @@ let g:LanguageClient_serverCommands ={
 	\'typescript': ['typescript-language-server', '--stdio'],
 	\'c':['clangd','-compile-commands-dir=' . getcwd()],
 	\'cpp':['clangd','-compile-commands-dir=' . getcwd()],
+	\'rust':['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
 \}
 
 function LC_maps()
