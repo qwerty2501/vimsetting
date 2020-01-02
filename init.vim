@@ -8,6 +8,7 @@ source dein.vim
 source setting.vim
 source lsp.vim
 source keymap.vim
+source denite.vim
 
 
 
