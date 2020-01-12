@@ -33,5 +33,8 @@ let g:neoterm_default_mod = 'tab'
 let g:neoterm_autoinsert= 1
 let g:python3_host_prog= "/usr/bin/python3"
 let g:python_host_prog=""
+
+let s:script_dir = expand('<sfile>:p:h') 
+let g:neosnippet#snippets_directory=s:script_dir . '/snippets'
 filetype plugin indent on
 syntax enable
