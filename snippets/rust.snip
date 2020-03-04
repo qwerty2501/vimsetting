@@ -2375,3 +2375,14 @@ snippet template
     }
     fn solve() {}
 
+snippet attest
+    macro_rules! test {
+        ($($input:expr => $output:expr),* $(,)*) => {
+            #[test]
+            fn solve_test() {
+                $(
+                    assert_eq!(solve($input), $output);
+                )*
+            }
+        };
+    }

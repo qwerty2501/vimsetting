@@ -16,6 +16,7 @@ set noexpandtab
 set hidden
 set completeopt=menuone
 set nowrap
+set nofixeol
 set signcolumn=yes
 set list
 set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
