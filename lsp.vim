@@ -7,6 +7,7 @@ let g:LanguageClient_serverCommands ={
 	\'c':['clangd','-compile-commands-dir=' . getcwd()],
 	\'cpp':['clangd','-compile-commands-dir=' . getcwd()],
 	\'rust':['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+	\'html':['html-languageserver','--stdio'],
 \}
 
 function LC_maps()
