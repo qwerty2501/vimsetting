@@ -25,7 +25,7 @@ set foldmethod=syntax
 set foldlevel=100
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.md,*.json,*.graphql,*.vue,*.{yaml,yml} :Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.less,*.md,*.json,*.graphql,*.vue,*.{yaml,yml},*.css,*.scss,*.html :Prettier
 let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
 let g:loaded_netrw       = 1
