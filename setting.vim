@@ -26,7 +26,7 @@ set foldlevel=100
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.less,*.md,*.json,*.graphql,*.vue,*.{yaml,yml},*.css,*.scss,*.html :Prettier
-autocmd BufRead,BufNewFile .postcssrc            set filetype=json
+autocmd BufRead,BufNewFile .postcssrc,.posthtmlrc            set filetype=json
 let g:deoplete#enable_at_startup = 1
 let g:rainbow_active = 1
 let g:loaded_netrw       = 1

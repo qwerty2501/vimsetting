@@ -10,6 +10,7 @@ let g:LanguageClient_serverCommands ={
 	\'html':['html-languageserver','--stdio'],
 	\'css':['css-languageserver','--stdio'],
 	\'scss':['css-languageserver','--stdio'],
+	\'json':['vscode-json-languageserver','--stdio'],
 \}
 
 function LC_maps()
