@@ -23,3 +23,8 @@ imap <expr><TAB>
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
+
+if executable('xvkbd')
+	 inoremap <silent><Esc> <Esc>:call system('xvkbd -text "\[Control]\[Shift]\[Delete]" > /dev/null 2>&1 ')<CR>
+	 inoremap <silent><C-c> <Esc>:call system('xvkbd -text "\[Control]\[Shift]\[Delete]" > /dev/null 2>&1 ')<CR>
+endif
