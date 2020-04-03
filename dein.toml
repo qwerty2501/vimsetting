@@ -92,3 +92,6 @@ repo = 'vim-scripts/grep.vim'
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
+
+[[plugins]]
+repo = 'previm/previm'

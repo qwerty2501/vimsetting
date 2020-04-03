@@ -38,5 +38,6 @@ let g:python_host_prog=""
 
 let s:script_dir = expand('<sfile>:p:h') 
 let g:neosnippet#snippets_directory=s:script_dir . '/snippets'
+let g:previm_open_cmd='xdg-open'
 filetype plugin indent on
 syntax enable
