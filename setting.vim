@@ -23,6 +23,7 @@ set listchars=tab:>-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set foldmethod=syntax
 set foldlevel=100
+set textwidth=300
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.less,*.md,*.json,*.graphql,*.vue,*.{yaml,yml},*.css,*.scss,*.html,.postcssrc,.posthtmlrc :Prettier
