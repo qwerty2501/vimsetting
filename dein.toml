@@ -95,3 +95,6 @@ repo = 'rust-lang/rust.vim'
 
 [[plugins]]
 repo = 'previm/previm'
+
+[[plugins]]
+repo = 'mattn/vim-sqlfmt'
